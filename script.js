@@ -1,4 +1,4 @@
-const todoForm = document.querySelector(".todo-form");
+/* const todoForm = document.querySelector(".todo-form");
 const todoInput = document.querySelector("input");
 const todoCollection = document.querySelector(".todo-collection");
 
@@ -189,4 +189,4 @@ function updateTodoInLS() {
     localStorage.getItem("todos") === null
       ? []
       : JSON.parse(localStorage.getItem("todos"));
-}
+}*/
