@@ -1,13 +1,21 @@
 
 //todoForm
+<<<<<<< HEAD
 const todoForm = document.querySelector(".todo-form")
+=======
+const todoForm = document.querySelector(".todo-form");
+>>>>>>> f81b3a369e803d7c9478e4ab40cf4e735114de53
 const todoInput = document.querySelector("input");
 const todoCollection = document.querySelector(".todo-collection");
 
 todoForm.addEventListener("submit", addTodo);
 
 function addTodo(e) {
+<<<<<<< HEAD
   if (todoInput.value=== "") {
+=======
+  if (todoInput.value== "") {
+>>>>>>> f81b3a369e803d7c9478e4ab40cf4e735114de53
     // alert to indicate that the user must input something
     alert("enter something!");
   } else {
@@ -48,8 +56,13 @@ function addTodo(e) {
     deleteButton.innerText = "Delete";
 
     // add elements to todo list
+
     //li m append todoTitle
+<<<<<<< HEAD
     li.appendChild(todoTitle);
+=======
+    li.appendChild(todoTitle)
+>>>>>>> f81b3a369e803d7c9478e4ab40cf4e735114de53
     li.appendChild(editableInput);
     li.appendChild(editButton);
     li.appendChild(saveButton);
@@ -95,8 +108,10 @@ function getTodosFromLS() {
     todos = JSON.parse(localStorage.getItem("todos"));
   }
 
+  
   todos.forEach(todo => {
     // create elements
+
     const li = document.createElement("li");
     const todoTitle = document.createElement("span");
     const editableInput = document.createElement("input");
@@ -131,7 +146,7 @@ function getTodosFromLS() {
     deleteButton.classList.add("button--delete");
     deleteButton.innerText = "Delete";
 
-    // add elements to todo list
+    // // add elements to todo list
     li.appendChild(todoTitle);
     li.appendChild(editableInput);
     li.appendChild(editButton);
@@ -169,6 +184,7 @@ function getTodosFromLS() {
 function saveTodoToLS() {
   // complete the function
   let todos;
+<<<<<<< HEAD
   if (localstorage.getItem("todos")===null ) {
     todos=[];
   } else {
@@ -177,6 +193,15 @@ function saveTodoToLS() {
   todos.push(todoInput.value);
   localStorage.setItem("todos",JSON.stringify(todos));
 
+=======
+  if (localstorage.getItem("todos")=== null ) {
+    todos=[];
+  } else {
+    todos = JSON.parse(localStorage.getItem("todos"));
+  }
+  todos.push(todoInput.value);
+  localStorage.setItem("todos",JSON.stringify(todos));
+>>>>>>> f81b3a369e803d7c9478e4ab40cf4e735114de53
 }
 
 function deleteTodoFromLS() {
